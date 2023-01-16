@@ -20,7 +20,7 @@ ADDITIONAL_DISK_SIZE = 1024 * 5 # 5GiB
 USER = ENV['USER'] = 'root'
 USER_HOME = ENV['USER_HOME'] = '/root'
 USER_PASSWORD = ENV['USER_PASSWORD'] = 'vagrant'
-BOX = 'bento/centos-8'
+BOX = 'bento/centos-8.4'
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 Vagrant.configure '2' do |config|
