@@ -20,7 +20,7 @@ ADDITIONAL_DISK_SIZE = 1024 * 5 # 5GiB
 USER = ENV['USER'] = 'root'
 USER_HOME = ENV['USER_HOME'] = '/root'
 USER_PASSWORD = ENV['USER_PASSWORD'] = 'vagrant'
-BOX = 'bento/centos-8'
+BOX = 'bento/centos-8.4'
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 Vagrant.configure '2' do |config|
@@ -33,7 +33,7 @@ Vagrant.configure '2' do |config|
     # # # # # # BEGIN: Install python interpreter mandatory to use Ansible
     sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
     sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-    yum module install -y python36
+    yum module install -y python39
     yum clean all -y
     # # # # # # END
   INPUT
