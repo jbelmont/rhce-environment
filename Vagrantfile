@@ -33,7 +33,8 @@ Vagrant.configure '2' do |config|
     # # # # # # BEGIN: Install python interpreter mandatory to use Ansible
     sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
     sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-    yum module install -y python36
+    # need python 3.9 for ansible install
+    yum module install -y python39
     yum clean all -y
     # # # # # # END
   INPUT
